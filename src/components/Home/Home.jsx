@@ -10,7 +10,10 @@ const Home = ({render,setrender}) => {
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
-    .then(json=>dispatch({type:'ADD',payload:json}));
+    .then(json=>{
+      dispatch({type:'ADD',payload:json});
+      setrender(!render)
+    });
   }, [])
 
   return (

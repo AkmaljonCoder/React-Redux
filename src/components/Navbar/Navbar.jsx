@@ -12,13 +12,13 @@ const Navbar = ({render,setrender}) => {
   }, [render])
 
   return (
-    <div>{
+    <div className='maindiv'>{
         data.length === 0 ?
         <h1>nothing to see here</h1>
         :
         data.map((item,index)=>{
           return(
-            <h1 key={index}>{item.title}</h1>
+            <h1 className='text' key={index}>{`${index+1} - ${item.title}`}</h1>
           )
         })
       }
