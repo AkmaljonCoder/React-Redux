@@ -11,8 +11,10 @@ const Home = ({render,setrender}) => {
 
     fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
-    .then(json=>dispatch({type:'ADD',payload:json}))
-    .then(setrender(!render));
+    .then(json=>{
+      dispatch({type:'ADD',payload:json});
+      setrender(!render)
+    })
 
     fetch('https://fakestoreapi.com/users')
     .then(res=>res.json())
