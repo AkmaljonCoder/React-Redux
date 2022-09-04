@@ -5,11 +5,28 @@
 }
 
 .maindiv{
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: scroll;
 }
 
 .text{
     margin-bottom: 20px;
+}
+
+.usertitle{
+    margin: 25px 20px;
+}
+
+.userdiv {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.userdiv ul{
+    margin: 0 0 20px 20px;
+}
+
+.wrapper h1{
+    margin-bottom: 10px;
 }
 

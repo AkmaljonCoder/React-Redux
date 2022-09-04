@@ -12,7 +12,9 @@ const Navbar = ({render,setrender}) => {
   }, [render])
 
   return (
-    <div className='maindiv'>{
+    <div className='maindiv'>
+      <h1>Products</h1>
+      {
         data.length === 0 ?
         <h1>nothing to see here</h1>
         :

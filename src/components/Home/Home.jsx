@@ -8,12 +8,19 @@ const Home = ({render,setrender}) => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+
     fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
+    .then(json=>dispatch({type:'ADD',payload:json}))
+    .then(setrender(!render));
+
+    fetch('https://fakestoreapi.com/users')
+    .then(res=>res.json())
     .then(json=>{
-      dispatch({type:'ADD',payload:json});
-      setrender(!render)
+      dispatch({type:'ADD_USERS',payload:json});
+      setrender(!render);
     });
+
   }, [])
 
   return (
